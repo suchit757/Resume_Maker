@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+import "./App.scss";
+import Resume from './resume/resume';
+import OutResume from './OutResume/OutResume';
+import EmptyResume from './emptyResume/emptyResume';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+
+  render() {
+    return (
+      <div style={{backgroundColor:"lightgray"}}>
+        <BrowserRouter>
+          <Switch>
+              <Route path="/" component={Resume} exact/>
+              <Route path="/popup/redirect" component={OutResume} exact/>
+              <Route path="/empty/resume/templete" component={EmptyResume} exact/>
+              <Route component={Resume}/>
+          </Switch>
+        </BrowserRouter>
+      </div>
+    )
+  }
 }
-
-export default App;
