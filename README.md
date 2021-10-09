@@ -1,3 +1,33 @@
+# OverView of App
+
+![Resume_Maker-App](https://user-images.githubusercontent.com/53007019/136656303-312c3cfc-e84e-4aea-851f-de3518bdffbf.gif)
+
+# Resume maker {resume.tsx}
+-> Input and textarea accoringly implimented as per project requirement.
+-> validation also implimented on mandatry fields like Email , name , birthday etc..
+-> tost notification for implimented when error , warrning, success happends.
+->date picker as add for date.
+-> multiple selector also for Skill, Language input.
+
+# Resume OutPut {OutResume.tsx}
+-> Download resume functinatity also there with there User name .
+-> Notification on download also implimented for conformatioh with user name.
+-> create more resume button. (that clean the localStorage while toggel ).
+
+# code part
+-> use react tsx (typeScript) ClassComponets.
+-> using CRUD opertion for module change and set localStorage data in resume.tsx module and retrive  from get   localStorage in OutResume.tsx module required data.
+-> Download functionality use { html2canvas, jspdf} dependencys.
+-> custmize input and textarea data in interface IObejctVlaue.
+-> multiSelect in Skill and Language input fields use dependency {react-multi-select-component}.
+-> for notify use depencency { react-toastify }.
+
+# handel test case
+-> localStorage is empty its not allow to render on OutPut resume page untill required fileds are not fill.
+
+# Check-out Empty Resume templete
+-> empty resume templete module added.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -44,29 +74,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-# Resume maker {resume.tsx}
--> Input and textarea accoringly implimented as per project requirement.
--> validation also implimented on mandatry fields like Email , name , birthday etc..
--> tost notification for implimented when error , warrning, success happends.
-->date picker as add for date.
--> multiple selector also for Skill, Language input.
-
-# Resume OutPut {OutResume.tsx}
--> Download resume functinatity also there with there User name .
--> Notification on download also implimented for conformatioh with user name.
--> create more resume button. (that clean the localStorage while toggel ).
-
-# code part
--> use react tsx (typeScript) ClassComponets.
--> using CRUD opertion for module change and set localStorage data in resume.tsx module and retrive  from get   localStorage in OutResume.tsx module required data.
--> Download functionality use { html2canvas, jspdf} dependencys.
--> custmize input and textarea data in interface IObejctVlaue.
--> multiSelect in Skill and Language input fields use dependency {react-multi-select-component}.
--> for notify use depencency { react-toastify }.
-
-# handel test case
--> localStorage is empty its not allow to render on OutPut resume page untill required fileds are not fill.
-
-# Check-out Empty Resume templete
--> empty resume templete module added.
